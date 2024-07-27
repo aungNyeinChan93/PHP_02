@@ -4,7 +4,7 @@ declare(strict_types=1);
 error_reporting(E_ALL);
 ini_set("dissplay_errors", "1");
 
-interface Animal
+interface AnimalInterface
 {
     public function eat();
     public function sleep();
@@ -15,7 +15,7 @@ interface DogInterface
     public function bark();
 }
 
-class Dog implements Animal, DogInterface
+class Dog implements AnimalInterface, DogInterface
 {
     private $name;
     public function __construct(string $name)
