@@ -9,6 +9,7 @@ interface AdminInterface{
 
 interface UserInterface{
     public function edit();
+
 }
 
 interface SuperAdminInterface{
@@ -25,6 +26,7 @@ class User implements UserInterface{
     public function edit(){
         echo __CLASS__." edit account!<br>";
     }
+    // public $test ="testing!";
 }
 
 class SuperAdmin implements SuperAdminInterface{
@@ -39,7 +41,10 @@ class SuperAdmin implements SuperAdminInterface{
     }
 };
 
-$superAdmin = new SuperAdmin(new Admin(),new User());
+$superAdmin = new SuperAdmin(new Admin,new User);
 $superAdmin->delete();
 $superAdmin->admin->create();
 SuperAdmin::$user->edit();
+// echo SuperAdmin::$user->test;
+
+
