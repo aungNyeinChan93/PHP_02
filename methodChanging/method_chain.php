@@ -63,3 +63,7 @@ class JuiceMaker {
 
 JuiceMaker::start()->addWater(10)->addFlavour("orange");
 JuiceMaker::start()->addWater(50)->addFlavour("mango");
+
+
+define("DD",realpath("."));
+var_dump(DD);
